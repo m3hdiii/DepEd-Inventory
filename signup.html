@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<div class="page-header"><h1>Employee Registration</h1></div>
+<div class="page-headercol-lg-12 col-lg-offset-4"><h1>Employee Registration</h1></div>
 
 <form class="form-horizontal" role="form" method="post">
     <div class="row">
@@ -303,108 +303,12 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-7 col-sm-offset-2">
-                                <select data-placeholder="With Groups" class="chosen-select" tabindex="5">
-                                    <option value=""></option>
-                                    <optgroup label="NFC EAST">
-                                        <option>Dallas Cowboys</option>
-                                        <option>New York Giants</option>
-                                        <option>Philadelphia Eagles</option>
-                                        <option>Washington Redskins</option>
-                                        <optgroup>
-                                            <optgroup label="NFC NORTH">
-                                                <option>Chicago Bears</option>
-                                                <option>Detroit Lions</option>
-                                                <option>Green Bay Packers</option>
-                                                <option>Minnesota Vikings</option>
-                                            </optgroup>
-                                            <optgroup label="NFC SOUTH">
-                                                <option>Atlanta Falcons</option>
-                                                <option>Carolina Panthers</option>
-                                                <option>New Orleans Saints</option>
-                                                <option>Tampa Bay Buccaneers</option>
-                                            </optgroup>
-                                            <optgroup label="NFC WEST">
-                                                <option>Arizona Cardinals</option>
-                                                <option>St. Louis Rams</option>
-                                                <option>San Francisco 49ers</option>
-                                                <option>Seattle Seahawks</option>
-                                            </optgroup>
-                                            <optgroup label="AFC EAST">
-                                                <option>Buffalo Bills</option>
-                                                <option>Miami Dolphins</option>
-                                                <option>New England Patriots</option>
-                                                <option>New York Jets</option>
-                                            </optgroup>
-                                            <optgroup label="AFC NORTH">
-                                                <option>Baltimore Ravens</option>
-                                                <option>Cincinnati Bengals</option>
-                                                <option>Cleveland Browns</option>
-                                                <option>Pittsburgh Steelers</option>
-                                            </optgroup>
-                                            <optgroup label="AFC SOUTH">
-                                                <option>Houston Texans</option>
-                                                <option>Indianapolis Colts</option>
-                                                <option>Jacksonville Jaguars</option>
-                                                <option>Tennessee Titans</option>
-                                            </optgroup>
-                                            <optgroup label="AFC WEST">
-                                                <option>Denver Broncos</option>
-                                                <option>Kansas City Chiefs</option>
-                                                <option>Oakland Raiders</option>
-                                                <option>San Diego Chargers</option>
-                                            </optgroup>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-7 col-sm-offset-2">
-                                <select data-placeholder="With Deselect" class="chosen-select-deselect" tabindex="7">
-                                    <option value=""></option>
-                                    <option>American Black Bear</option>
-                                    <option>Asiatic Black Bear</option>
-                                    <option>Brown Bear</option>
-                                    <option>Giant Panda</option>
-                                    <option selected>Sloth Bear</option>
-                                    <option>Sun Bear</option>
-                                    <option>Polar Bear</option>
-                                    <option>Spectacled Bear</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-7 col-sm-offset-2">
-                                <select data-placeholder="Right to Left" class="chosen-select chosen-rtl" tabindex="7">
-                                    <option value=""></option>
-                                    <option>American Black Bear</option>
-                                    <option>Asiatic Black Bear</option>
-                                    <option>Brown Bear</option>
-                                    <option>Giant Panda</option>
-                                    <option selected>Sloth Bear</option>
-                                    <option disabled>Sun Bear</option>
-                                    <option>Polar Bear</option>
-                                    <option disabled>Spectacled Bear</option>
-                                </select>
-                            </div>
-                        </div>
                         <hr class="dotted">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Date &amp; Time Picker</label>
-                            <div class="col-sm-3">
-                                <div class='input-group date' id="datetimepicker" >
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="dotted">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Date Picker</label>
+                            <label class="col-sm-2 control-label">Birthday</label>
                             <div class="col-sm-3">
                                 <div class='input-group date' id="datepicker" >
-                                    <input type='text' class="form-control" data-date-format="YYYY/MM/DD" />
+                                    <input type='date' class="form-control" data-date-format="YYYY/MM/DD" />
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                                             </span>
                                 </div>
@@ -412,76 +316,20 @@
                         </div>
                         <hr class="dotted">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Time Picker</label>
-                            <div class="col-sm-3">
-                                <div class='input-group date' id="timepicker" >
-                                    <input type='text' class="form-control" data-date-format="YYYY/MM/DD" />
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span>
-                                            </span>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="dotted">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Date Range Picker</label>
-                            <div class="col-sm-3">
-                                <div class='input-group date' id="datetimerangepicker1" >
-                                    <input type='text' class="form-control" data-date-format="YYYY/MM/DD" />
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class='input-group date' id="datetimerangepicker2" >
-                                    <input type='text' class="form-control" data-date-format="YYYY/MM/DD" />
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="dotted">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Checkbox</label>
-                            <div class="col-sm-7">
-                                <div class="switch-button xs showcase-switch-button">
-                                    <input id="switch-button-1" checked type="checkbox">
-                                    <label for="switch-button-1"></label>
-                                </div>
-                                <div class="switch-button info sm showcase-switch-button">
-                                    <input id="switch-button-2" checked type="checkbox">
-                                    <label for="switch-button-2"></label>
-                                </div>
-                                <div class="switch-button danger showcase-switch-button">
-                                    <input id="switch-button-3" checked type="checkbox">
-                                    <label for="switch-button-3"></label>
-                                </div>
-                                <div class="switch-button lg primary showcase-switch-button">
-                                    <input id="switch-button-4" checked type="checkbox">
-                                    <label for="switch-button-4"></label>
-                                </div>
-                                <div class="switch-button xlg warning showcase-switch-button">
-                                    <input id="switch-button-5" checked type="checkbox">
-                                    <label for="switch-button-5"></label>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="dotted">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Radio Button</label>
+                            <label class="col-sm-2 control-label">Gender</label>
                             <div class="col-sm-7">
                                 <div class="switch-button showcase-switch-button">
                                     <input id="switch-button-6" name="switch-radio" type="radio">
-                                    <label for="switch-button-6"></label>
+                                    <label for="switch-button-6">Male</label>
                                 </div>
                                 <div class="switch-button showcase-switch-button">
                                     <input id="switch-button-7" checked name="switch-radio" type="radio">
-                                    <label for="switch-button-7"></label>
-                                </div>
-                                <div class="switch-button showcase-switch-button">
-                                    <input id="switch-button-8" name="switch-radio" type="radio">
-                                    <label for="switch-button-8"></label>
+                                    <label for="switch-button-7">Female</label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-lg-4 col-lg-offset-4">
+                            <button type="submit" class="btn btn-purple btn-block">Register Employee</button>
                         </div>
                     </form>
                 </div>
@@ -490,7 +338,7 @@
     </div>
 </form>
 
-                <button type="submit" class="btn btn-purple btn-block">Register Employee</button>
+
 
 
 
