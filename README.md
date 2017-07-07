@@ -2,7 +2,8 @@
 
 the html pages that are ok are:
 1. Login Page (login.html)
-
+2. employee registration (signup.html)
 the html pages under construction are:
 1. home page (index.html)
-2. employee registration (signup.html)
+<hr>
+just message me if the fields are incomplete or incompatible bro thanks.
