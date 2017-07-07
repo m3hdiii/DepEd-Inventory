@@ -1,101 +1,239 @@
 
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Brio Web App - Bootstrap Admin Template + AngularJS</title>
-
-<meta name="description" content="">
-    <meta name="author" content="Akshay Kumar">
-
-    <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
-
-    <!-- Fonts  -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300' rel='stylesheet' type='text/css'>
-
-    <!-- Base Styling  -->
-<link rel="stylesheet" href="assets/css/app/app.v1.css" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    </head>
-    <body>
-
-
-    <div class="container">
-    <div class="row">
-    <div class="col-lg-4 col-lg-offset-4">
-    <h3 class="text-center">Braio</h3>
-    <p class="text-center">Sign in to get in touch</p>
-<hr class="clean">
-    <form role="form">
-    <div class="form-group input-group">
-    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-    <input type="email" class="form-control"  placeholder="Email Adress">
-    </div>
-    <div class="form-group input-group">
-    <span class="input-group-addon"><i class="fa fa-key"></i></span>
-    <input type="text" class="form-control"  placeholder="Password">
-    </div>
-    <div class="form-group">
-    <label class="cr-styled">
-    <input type="checkbox" ng-model="todo.done">
-    <i class="fa"></i>
-    </label>
-    Remember me
-</div>
-<button type="submit" class="btn btn-purple btn-block">Sign in</button>
-    </form>
-    <hr>
-
-    <p class="text-center text-gray">Dont have account yet!</p>
-<button type="submit" class="btn btn-default btn-block">Create Account</button>
-</div>
-</div>
-</div>
 
 
 
-<!-- JQuery v1.9.1 -->
-<script src="assets/js/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="assets/js/plugins/underscore/underscore-min.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-
-    <!-- Globalize -->
-    <script src="assets/js/globalize/globalize.min.js"></script>
-
-    <!-- NanoScroll -->
-    <script src="assets/js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+/********************************
+Preloader
+********************************/
+$(window).load(function() {
+  $('.loading-container').fadeOut(1000, function() {
+	$(this).remove();
+  });
+});	
 
 
 
 
-    <!-- Custom JQuery -->
-<script src="assets/js/app/custom.js" type="text/javascript"></script>
+
+
+$(function(){
+
+	
+	/*$('.dropdown-menu').click(function(event){
+	  event.stopPropagation();
+	});*/
+	
+	
+	
+	
+	/********************************
+	Toggle Aside Menu
+	********************************/
+	
+	$(document).on('click', '.navbar-toggle', function(){
+	
+		$('aside.left-panel').toggleClass('collapsed');
+
+	});
+	
+	
+	
+	
+	
+	/********************************
+	Aside Navigation Menu
+	********************************/
+
+	$("aside.left-panel nav.navigation > ul > li:has(ul) > a").click(function(){
+		
+		if( $("aside.left-panel").hasClass('collapsed') == false || $(window).width() < 768 ){
+
+		
+		
+		$("aside.left-panel nav.navigation > ul > li > ul").slideUp(300);
+		$("aside.left-panel nav.navigation > ul > li").removeClass('active');
+		
+		if(!$(this).next().is(":visible"))
+		{
+			
+			$(this).next().slideToggle(300,function(){ $("aside.left-panel:not(.collapsed)").getNiceScroll().resize(); });
+			$(this).closest('li').addClass('active');
+		}
+		
+		return false;
+		
+		}
+		
+	});
+	
+	
+	
+	/********************************
+	popover
+	********************************/
+	if( $.isFunction($.fn.popover) ){
+	$('.popover-btn').popover();
+	}
+	
+	
+	
+	/********************************
+	tooltip
+	********************************/
+	if( $.isFunction($.fn.tooltip) ){
+	$('.tooltip-btn').tooltip()
+	}
+	
+	
+	
+	/********************************
+	NanoScroll - fancy scroll bar
+	********************************/
+	if( $.isFunction($.fn.niceScroll) ){
+	$(".nicescroll").niceScroll({
+	
+		cursorcolor: '#9d9ea5',
+		cursorborderradius : '0px'		
+		
+	});
+	}
+	
+
+	if( $.isFunction($.fn.niceScroll) ){
+	$("aside.left-panel:not(.collapsed)").niceScroll({
+		cursorcolor: '#8e909a',
+		cursorborder: '0px solid #fff',
+		cursoropacitymax: '0.5',
+		cursorborderradius : '0px'	
+	});
+	}
+
+	
+	
+	
+	
+	/********************************
+	Input Mask
+	********************************/
+	if( $.isFunction($.fn.inputmask) ){
+		$(".inputmask").inputmask();
+	}
+	
+	
+	
+	
+	
+	/********************************
+	TagsInput
+	********************************/
+	if( $.isFunction($.fn.tagsinput) ){
+		$('.tagsinput').tagsinput();
+	}
+	
+	
+	
+	
+	
+	/********************************
+	Chosen Select
+	********************************/
+	if( $.isFunction($.fn.chosen) ){
+		$('.chosen-select').chosen();
+        $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
+	}
+	
+	
+	
+	
+	/********************************
+	DateTime Picker
+	********************************/
+	if( $.isFunction($.fn.datetimepicker) ){
+		$('#datetimepicker').datetimepicker();
+		$('#datepicker').datetimepicker({pickTime: false});
+		$('#timepicker').datetimepicker({pickDate: false});
+		
+		$('#datetimerangepicker1').datetimepicker();
+		$('#datetimerangepicker2').datetimepicker();
+		$("#datetimerangepicker1").on("dp.change",function (e) {
+		   $('#datetimerangepicker2').data("DateTimePicker").setMinDate(e.date);
+		});
+		$("#datetimerangepicker2").on("dp.change",function (e) {
+		   $('#datetimerangepicker1').data("DateTimePicker").setMaxDate(e.date);
+		});
+	}
+	
+	
+	/********************************
+	wysihtml5
+	********************************/
+	if( $.isFunction($.fn.wysihtml5) ){
+		$('.wysihtml').wysihtml5();
+	}
+	
+	
+	
+	/********************************
+	wysihtml5
+	********************************/
+	if( $.isFunction($.fn.ckeditor) ){
+	CKEDITOR.disableAutoInline = true;
+	$('#ckeditor').ckeditor();
+	$('.inlineckeditor').ckeditor();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/********************************
+	Scroll To Top
+	********************************/
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+	
+	
+	
+
+});
 
 
 
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-56821827-1', 'auto');
-ga('send', 'pageview');
 
-</script>
-</body>
-</html>
+
+
+
+/********************************
+Toggle Full Screen
+********************************/
+
+function toggleFullScreen() {
+	if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+		if (document.documentElement.requestFullScreen) {
+			document.documentElement.requestFullScreen();
+		} else if (document.documentElement.mozRequestFullScreen) {
+			document.documentElement.mozRequestFullScreen();
+		} else if (document.documentElement.webkitRequestFullScreen) {
+			document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+		}
+	} else {
+		if (document.cancelFullScreen) {
+			document.cancelFullScreen();
+		} else if (document.mozCancelFullScreen) {
+			document.mozCancelFullScreen();
+		} else if (document.webkitCancelFullScreen) {
+			document.webkitCancelFullScreen();
+		}
+	}
+}
+
+
+
+
