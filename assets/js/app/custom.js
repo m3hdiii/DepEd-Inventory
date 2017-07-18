@@ -5,11 +5,13 @@
 /********************************
 Preloader
 ********************************/
+/*
 $(window).load(function() {
   $('.loading-container').fadeOut(1000, function() {
 	$(this).remove();
   });
 });	
+*/
 
 
 
