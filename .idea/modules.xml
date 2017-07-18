@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DepEd-IS.iml" filepath="$PROJECT_DIR$/DepEd-IS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DepEd-Inventory.iml" filepath="$PROJECT_DIR$/.idea/DepEd-Inventory.iml" />
     </modules>
   </component>
 </project>
